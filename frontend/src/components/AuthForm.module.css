@@ -1,0 +1,152 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form h1 {
+  color: #f39c12;
+  text-align: center;
+}
+
+.form ul {
+  color: #e74c3c;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form p {
+  color: #e74c3c;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="text"],
+.form input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form input[type="email"]:focus,
+.form input[type="password"]:focus,
+.form input[type="text"]:focus,
+.form input[type="number"]:focus,
+.form input[type="email"]:hover,
+.form input[type="password"]:hover,
+.form input[type="text"]:hover,
+.form input[type="number"]:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.form .actions {
+  display: flex;
+}
+
+.form .actions a {
+  font-weight: bold;
+}
+
+.form .actions a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+@media (max-width: 768px) {
+  .form {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .form h1 {
+    font-size: 1.5rem;
+  }
+
+  .form p {
+    font-size: 14px;
+  }
+
+  .form label {
+    font-size: 0.9rem;
+  }
+
+  .form input[type="email"],
+  .form input[type="password"],
+  .form input[type="text"],
+  .form input[type="number"] {
+    padding: 10px;
+  }
+
+  .form .actions {
+    flex-direction: column;
+  }
+
+  .form .actions a {
+    margin-bottom: 10px;
+  }
+
+  .form .actions button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form {
+    padding: 10px;
+  }
+
+  .form h1 {
+    font-size: 1.25rem;
+  }
+
+  .form p {
+    font-size: 12px;
+  }
+
+  .form label {
+    font-size: 0.8rem;
+  }
+
+  .form input[type="email"],
+  .form input[type="password"],
+  .form input[type="text"],
+  .form input[type="number"] {
+    padding: 8px;
+  }
+
+  .form .actions a {
+    margin-bottom: 5px;
+  }
+
+  .form .actions button {
+    padding: 10px;
+  }
+}

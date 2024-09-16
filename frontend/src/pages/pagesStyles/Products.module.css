@@ -1,0 +1,127 @@
+.pageTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #333;
+}
+
+.galleryContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.playerBox {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.playerBox a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.playerBox img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.playerBox h4 {
+  margin: 8px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.playerBox h3 {
+  font-size: 1.5rem;
+  color: green; 
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+.playerBox h5 {
+  margin: 8px 0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.playerBox:hover {
+  transform: scale(1.05);
+}
+.navContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navContainer a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navContainer a:hover {
+  color: #0056b3;
+}
+@media (max-width: 768px) {
+  .galleryContainer {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    padding: 8px;
+  }
+
+  .playerBox {
+    padding: 12px;
+  }
+
+  .playerBox h4 {
+    font-size: 1rem;
+  }
+
+  .playerBox h3 {
+    font-size: 1.2rem;
+  }
+
+  .playerBox h5 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .galleryContainer {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    padding: 4px;
+  }
+
+  .playerBox {
+    padding: 8px;
+  }
+
+  .playerBox h4 {
+    font-size: 0.9rem;
+  }
+
+  .playerBox h3 {
+    font-size: 1rem;
+  }
+
+  .playerBox h5 {
+    font-size: 0.8rem;
+  }
+}

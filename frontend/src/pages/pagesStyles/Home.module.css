@@ -1,0 +1,260 @@
+.homeContainer {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  color: #fff;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.header h3 {
+  font-size: 1.5rem;
+  color: #f39c12;
+  margin: 0 10px;
+}
+.logo {
+  width: 50px;
+  margin: 0 10px;
+}
+
+.ballerShop {
+  font-size: 2.5rem;
+  color: #f39c12;
+  margin: 0 10px;
+}
+.saleDiv a:hover {
+  text-decoration: none;
+}
+.sale {
+  text-align: center;
+  color: white;
+  background-color: rgb(214, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+}
+.code {
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.heroContent {
+  text-align: center;
+}
+.ballerShop {
+  font-size: 60px;
+}
+.logo {
+  margin-top: 30px;
+  height: 90px;
+  width: 90px;
+}
+.heroContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.shopNowBtn {
+  padding: 15px 30px;
+  font-size: 1.3rem;
+  background: #e74c3c;
+  color: #fff;
+  transition: background 0.3s, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.shopNowBtn:hover {
+  background-color: #c0392b;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.featuredSection {
+  margin-bottom: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.featuredCategory h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.featuredItemContainer {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.featuredItem {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.featuredItem:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid #f39c12;
+}
+
+.featuredItem img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.usersOpinionsSection {
+  margin-top: 50px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.usersOpinionsSection h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.usersOpinion {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+}
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif; 
+  font-weight: bold;
+}
+p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif; 
+}
+.usersOpinion img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.usersOpinion p {
+  font-size: 1rem;
+  margin: 0;
+  color: #ee980fe9;
+}
+
+.usersOpinion h4 {
+  margin-top: 5px;
+  font-size: 1.1rem;
+  color: #f39c12;
+}
+.heroContent h2,
+.featuredCategory h2,
+.usersOpinionsSection h2 {
+  color: #f1c40f;
+  text-align: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .featuredItem {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .ballerShop {
+    font-size: 2rem;
+  }
+  .code {
+    padding: 8px;
+    font-size: 1rem;
+  }
+  .heroContent h2 {
+    font-size: 1.5rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+
+  .shopNowBtn {
+    padding: 8px 16px;
+  }
+
+  .featuredItem {
+    width: 100%;
+  }
+
+  .usersOpinion {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .usersOpinion img {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ballerShop {
+    font-size: 1.5rem;
+  }
+
+  .heroContent h2 {
+    font-size: 1.2rem;
+  }
+
+  .shopNowBtn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+  .code {
+    padding: 6px;
+    font-size: 0.9rem;
+  }
+  .usersOpinion img {
+    width: 50px;
+  }
+}

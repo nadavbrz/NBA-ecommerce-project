@@ -1,0 +1,76 @@
+/* PrivacyPolicy.module.css */
+
+.privacyPolicy {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #222;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.8em;
+    margin-top: 20px;
+    color: #444;
+  }
+  
+  p {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    margin-left: 20px;
+    list-style-type: disc;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section-specific styles */
+  .intro, .dataProtection, .policyChanges {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .dataCollection, .dataUse, .thirdParties, .yourChoices {
+    background-color: #e9ecef;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  .contactUs {
+    background-color: #dee2e6;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  
+  .contactUs a {
+    font-weight: bold;
+  }
+  

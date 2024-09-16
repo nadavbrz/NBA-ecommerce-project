@@ -1,0 +1,24 @@
+.logo {
+    position: relative;
+    color: white;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+  
