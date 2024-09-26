@@ -37,8 +37,8 @@ const Home = () => {
 
         <section className={classes.heroSection}>
           <div className={classes.heroContent}>
-            <h2>Shop the Latest NBA Jerseys</h2>
-            <p>Represent your favorite team with our exclusive collection.</p>
+            <h2 className={classes.heroHeader}>Shop the Latest NBA Jerseys</h2>
+            <p className={classes.heroP}>Represent your favorite team with our exclusive collection.</p>
             <Link to="/products" className={classes.shopNowBtn}>
               Shop Now
             </Link>
@@ -143,7 +143,7 @@ const Home = () => {
           <div className={classes.usersOpinion}>
             <img src="images/man.png" alt="Mark D." />
             <div>
-              <p>"My favorite place to buy jerseys. Never disappointed."</p>
+              <p className={classes.usersText}>"My favorite place to buy jerseys. Never disappointed."</p>
               <h4>– John D.</h4>
             </div>
           </div>
@@ -151,7 +151,7 @@ const Home = () => {
           <div className={classes.usersOpinion}>
             <img src="images/woman2.png" alt="Sarah A." />
             <div>
-              <p>
+              <p className={classes.usersText}>
                 "Best place to buy jerseys. Love the variety and authenticity."
               </p>
               <h4>– Sarah P.</h4>
@@ -161,7 +161,7 @@ const Home = () => {
           <div className={classes.usersOpinion}>
             <img src="images/woman2.png" alt="Emily R." />
             <div>
-              <p>
+              <p className={classes.usersText}>
                 "Great selection and awesome prices. Will definitely recommend!"
               </p>
               <h4>– Emily R.</h4>

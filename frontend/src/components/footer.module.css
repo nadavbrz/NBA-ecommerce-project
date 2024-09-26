@@ -1,33 +1,125 @@
-
 .Footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 20px;
-  background-color: #f1f1f1;
+  padding: 40px 20px;
+  background-color: #2d90ff;
   margin-top: auto;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #ccc;
+  font-size: 0.95rem;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
 }
 
 .Footer p {
   margin: 0;
-  padding: 0 15px;
-  line-height: 1.6;
-  color: #333;
-  /* flex: 1; */
+  padding: 0 20px;
+  line-height: 1.8;
+  color: #eee;
 }
 
-.FirstCol {
-  max-width: 200px;
+.FirstCol, .SecondCol, .ThirdCol, .FourthCol {
+  flex: 1;
+  margin-bottom: 20px;
+  min-width: 220px;
 }
 
-.SecondCol {
-  max-width: 200px;
+.MapLink, .EmailLink, .PhoneLink {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.ThirdCol {
-  max-width: 200px;
+.MapLink:hover, .EmailLink:hover, .PhoneLink:hover {
+  color: #ffe084;
+  text-shadow: 0 1px 5px rgba(255, 255, 255, 0.6);
 }
 
-.FourthCol {
-  max-width: 250px;
+.Footer a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.Footer a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffdd57;
+  transition: width 0.3s ease;
+}
+
+.Footer a:hover::before {
+  width: 100%;
+}
+
+.Footer a:hover {
+  color: #ffe084;
+  text-shadow: 0 1px 5px rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
+.SocialIcons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.SocialLink {
+  color: #ffdd57;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.SocialLink:hover {
+  color: #ffe084;
+}
+
+.Footer .FourthCol a {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #ffe084;
+}
+
+.Footer .FourthCol a:hover {
+  color: #fff8b3;
+}
+
+@media (max-width: 768px) {
+  .Footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .FirstCol, .SecondCol, .ThirdCol, .FourthCol {
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Footer {
+    padding: 20px 10px;
+  }
+
+  .Footer p {
+    padding: 0;
+  }
+
+  .Footer a {
+    font-size: 0.9rem;
+  }
+
+  .FirstCol, .SecondCol, .ThirdCol, .FourthCol {
+    max-width: 100%;
+  }
 }

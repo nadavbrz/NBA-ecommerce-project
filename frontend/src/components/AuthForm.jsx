@@ -4,7 +4,6 @@ import {
   useActionData,
   useSearchParams,
   useNavigation,
-  redirect,
 } from "react-router-dom";
 import classes from "./AuthForm.module.css";
 import { useEffect } from "react";
@@ -31,21 +30,21 @@ function AuthForm() {
       {data && data.message && <p>{data.message}</p>}
       <p>
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="email" required placeholder="your@email.com"/>
       </p>
       <p>
         <label htmlFor="password">Password</label>
-        <input type="password" id="password" name="password" required />
+        <input type="password" id="password" name="password" required placeholder="your password"/>
       </p>
       {!isLogin && (
         <>
           <p>
             <label htmlFor="username">Username</label>
-            <input type="text" id="username" name="username" required />
+            <input type="text" id="username" name="username" required placeholder="your username..." />
           </p>
           <p>
             <label htmlFor="age">Age</label>
-            <input type="number" id="age" name="age" min="0" required />
+            <input type="number" id="age" name="age" min="0" required placeholder="your age"/>
           </p>
         </>
       )}
@@ -53,7 +52,7 @@ function AuthForm() {
         <Link to={`?mode=${isLogin ? "signup" : "login"}`}>
           {isLogin ? "Sign Up" : "Login"}
         </Link>
-        <button type="submit" disabled={isSubmitting}>
+        <button className={classes.statusBtn} type="submit" disabled={isSubmitting}>
           {isSubmitting ? "Submitting..." : isLogin ? "Log In" : "Sign Up"}
         </button>
       </div>
@@ -63,7 +62,6 @@ function AuthForm() {
 
 export default AuthForm;
 
-// In your AuthForm component
 export async function action({ request }) {
   const searchParams = new URL(request.url).searchParams;
   const mode = searchParams.get("mode") || "login";
@@ -107,5 +105,5 @@ export async function action({ request }) {
   expiration.setHours(expiration.getHours() + 1);
   localStorage.setItem("expiration", expiration.toISOString());
   window.location.href = "/";
-  return null
+  return null;
 }

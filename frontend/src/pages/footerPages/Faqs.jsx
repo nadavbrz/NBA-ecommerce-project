@@ -3,7 +3,6 @@ import classes from '../pagesStyles/Faqs.module.css';
 import { Helmet } from "react-helmet-async";
 
 const Faqs = () => {
-  window.scrollTo(0, 0);
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAnswer = (index) => {

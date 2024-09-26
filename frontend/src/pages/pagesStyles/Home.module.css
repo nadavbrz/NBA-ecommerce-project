@@ -1,46 +1,57 @@
 .homeContainer {
   background: linear-gradient(to right, #2c3e50, #4ca1af);
   color: #fff;
-  padding: 20px;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 10px;
+  margin-bottom: 30px;
 }
+
 .header h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #f39c12;
-  margin: 0 10px;
+  margin: 0 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 .logo {
-  width: 50px;
+  width: 70px;
   margin: 0 10px;
 }
 
 .ballerShop {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #f39c12;
   margin: 0 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 .saleDiv a:hover {
-  text-decoration: none;
+  text-decoration: underline;
 }
+
 .sale {
   text-align: center;
   color: white;
   background-color: rgb(214, 0, 0);
-  border-radius: 10px;
-  padding: 10px;
-  text-decoration: none;
+  border-radius: 15px;
+  padding: 15px;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
+
 .code {
   background-color: white;
   color: black;
   border-radius: 8px;
-  padding: 5px;
+  padding: 8px;
+  font-weight: bold;
 }
 
 .heroSection {
@@ -53,23 +64,24 @@
 .heroContent {
   text-align: center;
 }
-.ballerShop {
-  font-size: 60px;
-}
-.logo {
-  margin-top: 30px;
-  height: 90px;
-  width: 90px;
-}
+
 .heroContent h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .heroContent p {
   font-size: 1.2rem;
   margin-bottom: 20px;
+}
+
+.heroHeader {
   color: white;
+}
+
+.heroP {
+  color: #f39c12;
 }
 
 .shopNowBtn {
@@ -80,82 +92,80 @@
   transition: background 0.3s, transform 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 2px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .shopNowBtn:hover {
   background-color: #c0392b;
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .featuredSection {
   margin-bottom: 50px;
   background: rgba(255, 255, 255, 0.1);
-  padding: 50px;
+  padding: 40px;
   border-radius: 20px;
 }
 
 .featuredCategory h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: #f39c12;
 }
 
 .featuredItemContainer {
   display: flex;
   gap: 15px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .featuredItem {
-  flex: 1;
-  background-color: rgba(255, 255, 255, 0.1);
+  flex: 1 1 30%;
+  background-color: rgba(255, 255, 255, 0.2);
   padding: 15px;
   border-radius: 10px;
   text-align: center;
   transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .featuredItem:hover {
-  transform: scale(1.08);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
   border: 2px solid #f39c12;
 }
 
 .featuredItem img {
-  width: 100%;
+  width: 80%;
+  max-width: 300px;
   height: auto;
   border-radius: 5px;
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
 }
 
 .usersOpinionsSection {
   margin-top: 50px;
-  animation: fadeInUp 1s ease-in-out;
-}
-
-.usersOpinionsSection h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 30px;
 }
 
 .usersOpinion {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
   padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
-h1, h2, h3 {
-  font-family: 'Roboto', sans-serif; 
-  font-weight: bold;
+
+.usersText {
+  color: white;
 }
-p {
-  line-height: 1.6;
-  font-size: 1.1rem;
-  font-family: 'Open Sans', sans-serif; 
-}
+
 .usersOpinion img {
   width: 50px;
   height: 50px;
@@ -163,98 +173,54 @@ p {
   margin-right: 15px;
 }
 
-.usersOpinion p {
-  font-size: 1rem;
-  margin: 0;
-  color: #ee980fe9;
-}
-
-.usersOpinion h4 {
-  margin-top: 5px;
-  font-size: 1.1rem;
-  color: #f39c12;
-}
-.heroContent h2,
-.featuredCategory h2,
-.usersOpinionsSection h2 {
-  color: #f1c40f;
-  text-align: center;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 1024px) {
-  .featuredItem {
-    width: 45%;
-  }
-}
-
 @media (max-width: 768px) {
+  .header h3 {
+    font-size: 1.5rem;
+  }
+.code{
+  padding: 3px;
+}
+  .ballerShop {
+    font-size: 2.5rem;
+  }
+
+  .featuredItem {
+    flex: 1 1 45%;
+  }
+
+  .shopNowBtn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .heroContent h2 {
+    font-size: 2rem;
+  }
+
+  .featuredItem img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
   .header {
     flex-direction: column;
-    gap: 10px;
   }
 
   .ballerShop {
     font-size: 2rem;
   }
-  .code {
-    padding: 8px;
-    font-size: 1rem;
-  }
-  .heroContent h2 {
-    font-size: 1.5rem;
-  }
 
-  .heroContent p {
-    font-size: 1rem;
+  .featuredItem {
+    flex: 1 1 100%;
   }
 
   .shopNowBtn {
+    font-size: 0.9rem;
     padding: 8px 16px;
   }
 
-  .featuredItem {
-    width: 100%;
-  }
-
-  .usersOpinion {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .usersOpinion img {
-    width: 60px;
-  }
-}
-
-@media (max-width: 480px) {
-  .ballerShop {
-    font-size: 1.5rem;
-  }
-
   .heroContent h2 {
-    font-size: 1.2rem;
-  }
-
-  .shopNowBtn {
-    padding: 6px 12px;
-    font-size: 0.9rem;
-  }
-  .code {
-    padding: 6px;
-    font-size: 0.9rem;
-  }
-  .usersOpinion img {
-    width: 50px;
+    font-size: 1.8rem;
   }
 }

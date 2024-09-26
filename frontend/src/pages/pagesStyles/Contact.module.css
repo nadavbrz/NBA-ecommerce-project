@@ -3,11 +3,12 @@
 }
 .Contact h1{
     color: #f39c12;
+    font-size: 3.2em;
 
 }
 .Contact h3{
     color: #ffa412;
-    font-size: 18px;
+    font-size: 1.5em;
     font-weight: bold;
     text-align: center;
 }
@@ -15,7 +16,8 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 600px;
+    max-width: 800px;
+    height: 600px;
     margin: 0 auto;
     padding: 20px;
     background-color: #f8f8f8;
@@ -26,7 +28,7 @@
   .form label {
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #333;
   }
   
@@ -39,7 +41,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     box-sizing: border-box;
-    font-size: 1rem;
+    font-size: 1.2rem;
     background-color: #fff;
     transition: border-color 0.3s ease;
   }
@@ -52,6 +54,7 @@
   }
   
   .form button {
+    font-size: 1.5em;
     padding: 12px 20px;
     background-color: #007bff;
     color: white;
