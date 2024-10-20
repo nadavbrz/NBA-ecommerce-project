@@ -44,7 +44,7 @@
   transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
 }
 
-.Footer a::before {
+/* .Footer a::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -53,7 +53,7 @@
   height: 2px;
   background-color: #ffdd57;
   transition: width 0.3s ease;
-}
+} */
 
 .Footer a:hover::before {
   width: 100%;
