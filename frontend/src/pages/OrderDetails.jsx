@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchOrders } from "../utils/fetchOrders";
 import classes from "../pages/pagesStyles/UserDetails.module.css";
-import { Link } from "react-router-dom";
 
 function OrderDetails() {
   const [orderDetails, setOrderDetails] = useState(null);
@@ -31,20 +30,28 @@ function OrderDetails() {
             <b>Order Date:</b> {new Date(order.orderDate).toLocaleString()}
           </p>
           <p>
-            <b>Status:</b> {order.status}
+            <b>Status:</b> 
+            <span
+              className={`${classes.statusTag} ${
+                order.status === "completed"
+                  ? classes.statusCompleted
+                  : order.status === "pending"
+                  ? classes.statusPending
+                  : classes.statusCanceled
+              }`}
+            >
+              {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
+            </span>
           </p>
           <div>
             <h3>Products:</h3>
             <ul>
               {order.products.map((product) => (
-                <li key={product.product?._id}>
-                 
+                <li key={product._id}>
+                  <img src={product.imgSrc} alt={product.productName} />
                   <div>
                     <p>
                       <b>Product Name:</b> {product.productName}
-                    </p>
-                    <p>
-                      <b>Model:</b> {product.model}
                     </p>
                     <p>
                       <b>Quantity:</b> {product.quantity}

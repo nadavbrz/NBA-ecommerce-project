@@ -1,8 +1,8 @@
 const express = require("express");
 const Order = require("../schemas/orderModal");
-const ClassicJerseys = require("../schemas/classicJerseysModal"); 
-const CurrentJerseys = require("../schemas/currentJerseysModal"); 
-const Shorts = require("../schemas/shortsModal"); 
+const ClassicJerseys = require("../schemas/classicJerseysModal");
+const CurrentJerseys = require("../schemas/currentJerseysModal");
+const Shorts = require("../schemas/shortsModal");
 const { checkAuth } = require("../utils/auth");
 
 const router = express.Router();
@@ -10,39 +10,32 @@ const router = express.Router();
 router.use(checkAuth);
 
 router.post("/", async (req, res, next) => {
-  const { products } = req.body;
+  const { products, totalAmount } = req.body;
   const user = req.user._id;
   const username = req.user.username;
 
+  console.log(req.body);
+
   try {
-    let totalAmount = 0;
+    let total = 0;
 
     const populatedProducts = await Promise.all(
       products.map(async (item) => {
         let productDetails;
-        switch (item.model) {
-          case "ClassicJerseys":
-            productDetails = await ClassicJerseys.findById(item.product);
-            break;
-          case "CurrentJerseys":
-            productDetails = await CurrentJerseys.findById(item.product);
-            break;
-          case "Shorts":
-            productDetails = await Shorts.findById(item.product);
-            break;
-          default:
-            throw new Error("Invalid product model");
-        }
+
+        productDetails =
+          (await ClassicJerseys.findById(item.product)) ||
+          (await CurrentJerseys.findById(item.product)) ||
+          (await Shorts.findById(item.product));
 
         if (!productDetails) {
           throw new Error("Product not found");
         }
-        console.log("Product Details:", productDetails);
+
         const quantity = item.quantity || 1;
-        totalAmount += productDetails.price * quantity;
+        total += productDetails.price * quantity; // Total should match totalAmount
         return {
           product: item.product,
-          model: item.model,
           quantity,
           productName: productDetails.productName,
           imgSrc: productDetails.imgSrc,
@@ -54,7 +47,7 @@ router.post("/", async (req, res, next) => {
       user,
       username,
       products: populatedProducts,
-      totalAmount,
+      totalAmount: totalAmount || total, // Ensure totalAmount is used
     });
 
     await newOrder.save();
@@ -65,40 +58,44 @@ router.post("/", async (req, res, next) => {
       message: "Order created successfully",
     });
   } catch (error) {
-    console.error("Error creating order:", error.message); // Log the error message
+    console.error("Error creating order:", error.message);
     next(error);
   }
 });
+
 router.get("/", async (req, res, next) => {
   try {
     let orders;
     if (req.user.role === "admin") {
       orders = await Order.find().populate("user").populate("products.product");
     } else {
-      orders = await Order.find({ user: req.user._id }).populate("products.product");
+      orders = await Order.find({ user: req.user._id }).populate(
+        "products.product"
+      );
     }
 
-    const transformedOrders = orders.map(order => ({
+    const transformedOrders = orders.map((order) => ({
       orderId: order._id,
       userId: order.user._id,
       username: order.username,
-      products: order.products.map(product => ({
+      products: order.products.map((product) => ({
         productId: product.product._id,
         productName: product.product.productName,
-        imgSrc :product.product.imgSrc,
-        model: product.model,
-        quantity: product.quantity
+        imgSrc: product.product.imgSrc,
+        quantity: product.quantity,
       })),
-      totalAmount: order.totalAmount
+      totalAmount: order.totalAmount,
     }));
 
-    res.status(200).json({ response: true, data: transformedOrders, message: "Found orders" });
+    res.status(200).json({
+      response: true,
+      data: transformedOrders,
+      message: "Found orders",
+    });
   } catch (error) {
     next(error);
   }
 });
-
-
 
 router.delete("/:id", async (req, res) => {
   if (req.user.role !== "admin") {
@@ -121,7 +118,9 @@ router.delete("/:id", async (req, res) => {
 });
 router.get("/me", checkAuth, async (req, res) => {
   try {
-    const orders = await Order.find({ user: req.user._id }).populate("products.product");
+    const orders = await Order.find({ user: req.user._id }).populate(
+      "products.product"
+    );
     if (!orders || orders.length === 0) {
       return res.status(404).json({ message: "No orders found for this user" });
     }
@@ -130,6 +129,5 @@ router.get("/me", checkAuth, async (req, res) => {
     res.status(500).json({ message: "Fetching order details failed" });
   }
 });
-
 
 module.exports = router;

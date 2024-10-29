@@ -72,6 +72,9 @@ const ProductDetail = () => {
       <Helmet>
         <title>Shorts details Page</title>
       </Helmet>
+      <button className={classes.backBtn}>
+        <Link to={"/products/productsShorts"}>Back to shorts</Link>
+      </button>
 
       <div className={classes.ProductDetailContainer}>
         <div className={classes.ProductDetailSection}>

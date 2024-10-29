@@ -1,120 +1,140 @@
 .userDetailsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-  
-  h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  p {
-    margin: 10px 0;
-    font-size: 18px;
-    color: #555;
-  }
-  .orderDetailsContainer {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .orderDetailsContainer {
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .orderCard {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-  
-  .orderCard p {
-    margin: 8px 0;
-    font-size: 16px;
-    color: #444;
-  }
-  
-  .orderCard h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 20px;
-    color: #333;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-  }
-  
-  .orderCard ul {
-    padding-left: 20px;
-    list-style: disc;
-  }
-  
-  .orderCard ul li {
-    margin-bottom: 15px;
-    padding: 10px;
-    border-left: 4px solid #007bff;
-    background-color: #f1f1f1;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .orderCard ul li img {
-    width: 100px;
-    height: auto;
-    margin-right: 15px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-  }
-  
-  .orderCard ul li p {
-    margin: 4px 0;
-    font-size: 16px;
-    color: #555;
-  }
-  
-  .orderCard ul li p b {
-    color: #007bff;
-  }
-  
-  h2 {
-    margin-bottom: 20px;
-    font-size: 26px;
-    color: #333;
-    text-align: center;
-  }
-  .totalAmount{
-    text-align: center;
-    font-weight: bold;
-  }
-  /* Added CSS for responsiveness */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f3f4f6;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #2c3e50;
+  text-align: center;
+  font-weight: bold;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #7f8c8d;
+}
+
+.orderDetailsContainer {
+  margin: 20px auto;
+  padding: 30px;
+  max-width: 850px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.orderCard {
+  margin-bottom: 25px;
+  padding: 25px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.orderCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.orderCard p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.orderCard h3 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #2980b9;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+}
+
+.orderCard ul {
+  padding-left: 25px;
+  list-style: none;
+}
+
+.orderCard ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.orderCard ul li:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.orderCard ul li img {
+  width: 120px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.orderCard ul li p {
+  margin: 4px 0;
+  font-size: 16px;
+  color: #34495e;
+}
+
+.orderCard ul li p b {
+  color: #007bff;
+}
+
+.totalAmount {
+  text-align: right;
+  font-size: 20px;
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.statusTag {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.status-pending {
+  background-color: #f39c12;
+}
+
+.status-completed {
+  background-color: #27ae60;
+}
+
+.status-canceled {
+  background-color: #e74c3c;
+}
+
 @media (max-width: 768px) {
   .orderDetailsContainer {
-    padding: 15px;
+    padding: 20px;
     max-width: 100%;
   }
 
   .orderCard {
-    padding: 15px;
+    padding: 20px;
   }
 
   .orderCard ul li {
@@ -123,7 +143,7 @@
   }
 
   .orderCard ul li img {
-    width: 80px;
+    width: 90px;
     margin-right: 0;
     margin-bottom: 10px;
   }
@@ -139,15 +159,19 @@
   .orderCard h3 {
     font-size: 18px;
   }
+
+  .totalAmount {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 480px) {
   .orderDetailsContainer {
-    padding: 10px;
+    padding: 15px;
   }
 
   .orderCard {
-    padding: 10px;
+    padding: 15px;
   }
 
   h2 {

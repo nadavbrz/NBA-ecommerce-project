@@ -10,7 +10,7 @@ const EditUsers = () => {
     username: "",
     age: "",
     email: "",
-    password: ""
+    // password: ""
   });
 
   const getUsers = async () => {
@@ -55,7 +55,7 @@ const EditUsers = () => {
         username: "",
         age: "",
         email: "",
-        password: ""
+        // password: ""
       });
       setMessage(responseData.message);
     }
@@ -85,7 +85,7 @@ const EditUsers = () => {
       username: user.username,
       age: user.age,
       email: user.email,
-      password: user.password
+      // password: user.password
     });
   };
 
@@ -120,14 +120,14 @@ const EditUsers = () => {
             name="email"
             onChange={changeFormData}
           />
-          <label htmlFor="password">Password:</label>
+          {/* <label htmlFor="password">Password:</label>
           <input
             type="password"
             value={formData.password}
             id="password"
             name="password"
             onChange={changeFormData}
-          />
+          /> */}
 
           <button type="submit">Edit</button>
         </form>
@@ -146,7 +146,7 @@ const EditUsers = () => {
                 <p>username: {user.username}</p>
                 <p>age: {user.age}</p>
                 <p>email: {user.email}</p>
-                <p>password: {user.password}</p>
+                {/* <p>password: {user.password}</p> */}
               </li>
             ))}
         </ul>

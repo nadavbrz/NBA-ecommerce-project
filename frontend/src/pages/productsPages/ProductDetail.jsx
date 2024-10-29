@@ -68,6 +68,9 @@ const ProductDetail = () => {
 
   return (
     <>
+        <button className={classes.backBtn}>
+        <Link to={"/products"}>Back to current jerseys</Link>
+      </button>
       <div className={classes.ProductDetailContainer}>
         <div className={classes.ProductDetailSection}>
           <div className={classes.ProductBox}>
@@ -100,8 +103,8 @@ const ProductDetail = () => {
               Add to cart
             </button>
             {alert.length > 0}
-              <p className={classes.alert}>{alert}</p>
-            
+            <p className={classes.alert}>{alert}</p>
+
             <div className={classes.sizeBox}>
               <h3>Size: {selectedSize}</h3>
               <div className={classes.sizes}>

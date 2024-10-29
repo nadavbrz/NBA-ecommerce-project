@@ -8,7 +8,6 @@ const orderSchema = new Schema({
   products: [
     {
       product: { type: Schema.Types.ObjectId, required: true, refPath: 'products.model' },
-      model: { type: String, required: true, enum: ["ClassicJerseys", "CurrentJerseys", "Shorts"] },
       quantity: { type: Number, required: true },
       productName: { type: String, required: true },
       imgSrc: { type: String, required: true },
