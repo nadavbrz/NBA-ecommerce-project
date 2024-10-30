@@ -38,6 +38,10 @@ app.use("/shorts", shortsRouter);
 app.use("/users", usersRouter);
 app.use("/orders", ordersRouter);
 
+app.get("/api", (req, res) => {
+  res.send("API is working");
+});
+
 app.post("/send-email", async (req, res) => {
   const { recipient, name, subject, text } = req.body;
 
