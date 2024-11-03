@@ -68,6 +68,9 @@ const ProductDetail = () => {
 
   return (
     <>
+     <Helmet>
+        <title>Current jerseys details Page</title>
+      </Helmet>
         <button className={classes.backBtn}>
         <Link to={"/products"}>Back to current jerseys</Link>
       </button>

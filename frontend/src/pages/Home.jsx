@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import { fetchUser } from "../utils/fetchUsers";
 const Home = () => {
   const [user, setUser] = useState(null);
-  const [test, setTest] = useState(null);
+  //  const [test, setTest] = useState(null);
   useEffect(() => {
     const getUser = async () => {
       const userData = await fetchUser();
@@ -14,36 +14,36 @@ const Home = () => {
     getUser();
   }, [user]);
   const token = localStorage.getItem("token");
-   async function fetchTest(){
-    try {
-      const response = await fetch('https://server.brzcode.site', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        }
-      })
-      const data = await response.json()
-      setTest(data)
+  //  async function fetchTest(){
+  //   try {
+  //     const response = await fetch('https://server.brzcode.site', {
+  //       method: 'GET',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       }
+  //     })
+  //     const data = await response.json()
+  //     setTest(data)
 
-    } catch (error) {
-      console.error(error)
-    }
+  //   } catch (error) {
+  //     console.error(error)
+  //   }
    
-   }
-   useEffect(() => {
-    fetchTest(); // Call the fetchTest function
-  }, []); // 
+  //  }
+  //  useEffect(() => {
+  //   fetchTest();
+  // }, []); 
   return (
     <>
       <Helmet>
-        <title>Home! Page</title>
+        <title>Home Page</title>
       </Helmet>
       <div className={classes.homeContainer}>
         <header className={classes.header}>
           <h3>Hello, {user ? user.username : "Guest"}!</h3>
           <img className={classes.logo} src="/images/NBA.png" alt="NBA logo" />
           <h1 className={classes.ballerShop}>Baller Shop</h1>
-          <h1>{test}</h1>
+          {/* <h1>{test}</h1> */}
         </header>
         {!token && (
           <div className={classes.saleDiv}>

@@ -9,13 +9,14 @@ const stripePromise = loadStripe("pk_test_51QDj6pEH32I6fwFycHRdE4GiKAdv6uDcNlOjH
 const CheckoutPage = () => {
     const location = useLocation();
     const clientSecret = location.state?.clientSecret;
+    const cartItems = location.state?.cartItems;
 
     return (
         <div>
             <h2>Complete Your Payment</h2>
             {clientSecret && (
                 <Elements stripe={stripePromise} options={{ clientSecret }}>
-                    <PaymentForm />
+                    <PaymentForm cartItems={cartItems}/>
                 </Elements>
             )}
         </div>

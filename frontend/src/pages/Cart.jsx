@@ -35,7 +35,7 @@ const Cart = () => {
 
         if (discountCode === "BALLER10" && !discountApplied) {
             const discountedAmount = totalAmount * 0.9;
-            setDiscountedTotal(discountedAmount.toFixed(2));
+            setDiscountedTotal(discountedAmount);
             setDiscountApplied(true);
             setDiscountMessage(""); 
         }
@@ -47,7 +47,8 @@ const Cart = () => {
             quantity: item.quantity,
         }));
 
-        const orderTotal = discountApplied ? discountedTotal : totalAmount.toFixed(2);
+        const orderTotal = discountApplied ? Math.round(discountedTotal * 100) : Math.round(totalAmount * 100);
+
 
         try {
             // Create payment intent
@@ -60,7 +61,7 @@ const Cart = () => {
             setClientSecret(paymentData.clientSecret);
             
             // Here you can navigate to the checkout page to handle the payment
-            navigate("/checkout", { state: { clientSecret: paymentData.clientSecret } });
+            navigate("/checkout", { state: { clientSecret: paymentData.clientSecret, cartItems } });
         } catch (error) {
             console.error("Error creating payment intent:", error);
         }
