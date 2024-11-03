@@ -21,7 +21,7 @@ mongoConnect.connectToMongo();
 // })
 
 const corsOption ={
-  origin: "*",
+  origin: "https://nba-e-commerce-project.brzcode.site",
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: 'Content-Type, Authorization',
 }

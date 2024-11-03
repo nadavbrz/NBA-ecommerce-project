@@ -14,7 +14,7 @@ const UpdateUsers = () => {
 
   const getUsers = async () => {
     try {
-      const response = await fetch("http://localhost:5050/users", {
+      const response = await fetch("https://server.brzcode.site/users", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const UpdateUsers = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5050/users", {
+      const response = await fetch("https://server.brzcode.site/users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -19,7 +19,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5050/send-email", {
+      const response = await fetch("https://server.brzcode.site/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

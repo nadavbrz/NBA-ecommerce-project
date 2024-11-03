@@ -1,7 +1,7 @@
 export async function fetchOrders() {
   const token = localStorage.getItem("token");
   try {
-    const response = await fetch("http://localhost:5050/orders/me", {
+    const response = await fetch("https://server.brzcode.site/orders/me", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

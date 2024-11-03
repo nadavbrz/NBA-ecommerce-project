@@ -18,7 +18,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const getJersey = async () => {
       const response = await fetch(
-        `http://localhost:5050/classicJerseys/${id}`
+        `https://server.brzcode.site/classicJerseys/${id}`
       );
       if (!response.ok) {
         console.error("Failed to fetch");
@@ -28,7 +28,7 @@ const ProductDetail = () => {
     };
 
     const getAllJerseys = async () => {
-      const response = await fetch("http://localhost:5050/classicJerseys");
+      const response = await fetch("https://server.brzcode.site/classicJerseys");
       if (!response.ok) {
         console.error("Failed to fetch other jerseys");
       }
@@ -74,6 +74,9 @@ const ProductDetail = () => {
       <Helmet>
         <title>Classic jerseys details Page</title>
       </Helmet>
+	 <button className={classes.backBtn}>
+        <Link to={"/products/productsClassicJerseys"}>Back to classic jerseys</Link>
+      </button>
       <div className={classes.ProductDetailContainer}>
         <div className={classes.ProductDetailSection}>
           <div className={classes.ProductBox}>

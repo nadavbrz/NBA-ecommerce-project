@@ -18,7 +18,7 @@ const EditCurrentJerseys = () => {
 
 
   const getJerseys = async () => {
-    const response = await fetch("http://localhost:5050/Jerseys");
+    const response = await fetch("https://server.brzcode.site/Jerseys");
     if (!response.ok) {
       return;
     }
@@ -38,7 +38,7 @@ const EditCurrentJerseys = () => {
   };
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`http://localhost:5050/Jerseys/${formData.id}`, {
+    const response = await fetch(`https://server.brzcode.site/Jerseys/${formData.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const EditCurrentJerseys = () => {
     }
   };
   const deleteJersey = async (id) => {
-    const response = await fetch(`http://localhost:5050/Jerseys/${id}`, {
+    const response = await fetch(`https://server.brzcode.site/Jerseys/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

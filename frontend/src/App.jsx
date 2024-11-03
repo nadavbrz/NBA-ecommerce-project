@@ -37,6 +37,7 @@ import { action as logoutAction } from "./components/LogOut";
 import UserDetails from "./pages/UserDetails";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
+import CheckoutPage from "./pages/Checkout";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,7 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
       {path : "cart" , element :<Cart />},
+	{path: "checkout" , element :<CheckoutPage />},
       {
         path: "products",
         element: (

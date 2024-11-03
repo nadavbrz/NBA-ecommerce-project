@@ -14,7 +14,7 @@ const EditUsers = () => {
   });
 
   const getUsers = async () => {
-    const response = await fetch("http://localhost:5050/users",{
+    const response = await fetch("https://server.brzcode.site/users",{
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -40,7 +40,7 @@ const EditUsers = () => {
   };
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`http://localhost:5050/users/${formData.id}`, {
+    const response = await fetch(`https://server.brzcode.site/users/${formData.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const EditUsers = () => {
     }
   };
   const deleteUser = async (id) => {
-    const response = await fetch(`http://localhost:5050/users/${id}`, {
+    const response = await fetch(`https://server.brzcode.site/users/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

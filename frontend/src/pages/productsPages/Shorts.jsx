@@ -9,7 +9,7 @@ const Shorts = () => {
   const [shorts, setShorts] = useState([]);
   const [sortOrder, setSortOrder] = useState("default");
   const getShorts = async () => {
-    const response = await fetch("http://localhost:5050/shorts");
+    const response = await fetch("https://server.brzcode.site/shorts");
     if (!response.ok) {
       return;
     }

@@ -9,7 +9,7 @@ const Products = () => {
   const [jerseys, setJerseys] = useState([]);
   const [sortOrder, setSortOrder] = useState("default");
   const getJerseys = async () => {
-    const response = await fetch("http://localhost:5050/jerseys");
+    const response = await fetch("https://server.brzcode.site/jerseys");
     if (!response.ok) {
       return;
     }
