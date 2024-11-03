@@ -23,8 +23,13 @@ mongoConnect.connectToMongo();
 //   legacyHeaders: false,
 // })
 
+<<<<<<< HEAD
 const corsOption = {
   origin: "*",
+=======
+const corsOption ={
+  origin: "https://nba-e-commerce-project.brzcode.site",
+>>>>>>> 7cb3df84cf967e5f032ed89043610627afc4892b
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: "Content-Type, Authorization",
 };

@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import classes from "../pagesStyles/ProductDetail.module.css";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../utils/CartContext";
+import { Helmet } from "react-helmet-async";
 
 const ProductDetail = () => {
   const [jersey, setJersey] = useState({});
@@ -16,7 +17,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     const getJersey = async () => {
-      const response = await fetch(`http://localhost:5050/jerseys/${id}`);
+      const response = await fetch(`https://server.brzcode.site/jerseys/${id}`);
       if (!response.ok) {
         console.error("Failed to fetch");
       }
@@ -25,7 +26,7 @@ const ProductDetail = () => {
     };
 
     const getAllJerseys = async () => {
-      const response = await fetch("http://localhost:5050/jerseys");
+      const response = await fetch("https://server.brzcode.site/jerseys");
       if (!response.ok) {
         console.error("Failed to fetch other jerseys");
       }
@@ -68,7 +69,11 @@ const ProductDetail = () => {
 
   return (
     <>
+<<<<<<< HEAD
      <Helmet>
+=======
+	<Helmet>
+>>>>>>> 7cb3df84cf967e5f032ed89043610627afc4892b
         <title>Current jerseys details Page</title>
       </Helmet>
         <button className={classes.backBtn}>

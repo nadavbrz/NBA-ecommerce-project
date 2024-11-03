@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Footer.module.css";
+import classes from "./footer.module.css";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebookF, FaLinkedinIn, FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa";
 

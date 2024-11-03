@@ -1,3 +1,4 @@
+import React from 'react';
 import { Form, NavLink, useRouteLoaderData } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import { FaCartShopping } from "react-icons/fa6";

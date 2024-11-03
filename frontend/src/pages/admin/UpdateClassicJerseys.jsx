@@ -16,7 +16,7 @@ const UpdateClassicJerseys = () => {
     price: "",
   });
   const getJerseys = async () => {
-    const response = await fetch("http://localhost:5050/classicJerseys");
+    const response = await fetch("https://server.brzcode.site/classicJerseys");
     if (!response.ok) {
       return;
     }
@@ -36,7 +36,7 @@ const UpdateClassicJerseys = () => {
   };
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5050/classicJerseys", {
+    const response = await fetch("https://server.brzcode.site/classicJerseys", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

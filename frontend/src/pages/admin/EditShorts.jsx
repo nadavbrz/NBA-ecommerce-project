@@ -15,7 +15,7 @@ const EditShorts = () => {
   });
 
   const getShorts = async () => {
-    const response = await fetch("http://localhost:5050/shorts");
+    const response = await fetch("https://server.brzcode.site/shorts");
     if (!response.ok) {
       return;
     }
@@ -36,7 +36,7 @@ const EditShorts = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     const response = await fetch(
-      `http://localhost:5050/shorts/${formData.id}`,
+      `https://server.brzcode.site/shorts/${formData.id}`,
       {
         method: "PUT",
         headers: {
@@ -63,7 +63,7 @@ const EditShorts = () => {
     }
   };
   const deleteUser = async (id) => {
-    const response = await fetch(`http://localhost:5050/shorts/${id}`, {
+    const response = await fetch(`https://server.brzcode.site/shorts/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

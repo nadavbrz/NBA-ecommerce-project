@@ -1,6 +1,9 @@
 // import './App.css'
 import React from 'react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7cb3df84cf967e5f032ed89043610627afc4892b
 import {
   createBrowserRouter,
   Outlet,
@@ -51,7 +54,11 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
       {path : "cart" , element :<Cart />},
+<<<<<<< HEAD
       {path: "checkout" , element :<CheckoutPage />},
+=======
+	{path: "checkout" , element :<CheckoutPage />},
+>>>>>>> 7cb3df84cf967e5f032ed89043610627afc4892b
       {
         path: "products",
         element: (

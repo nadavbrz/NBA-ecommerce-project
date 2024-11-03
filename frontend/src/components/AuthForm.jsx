@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Form,
   Link,
@@ -79,7 +80,7 @@ export async function action({ request }) {
     }),
   };
 
-  const response = await fetch(`http://localhost:5050/users/${mode}`, {
+  const response = await fetch(`https://server.brzcode.site/users/${mode}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

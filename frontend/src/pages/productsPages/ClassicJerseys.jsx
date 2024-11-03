@@ -9,7 +9,7 @@ const ClassicJerseys = () => {
   const [jerseys, setJerseys] = useState([]);
   const [sortOrder, setSortOrder] = useState("default");
   const getJerseys = async () => {
-    const response = await fetch("http://localhost:5050/classicJerseys");
+    const response = await fetch("https://server.brzcode.site/classicJerseys");
     if (!response.ok) {
       return;
     }

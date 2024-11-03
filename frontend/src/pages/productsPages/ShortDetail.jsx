@@ -17,7 +17,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     const getShort = async () => {
-      const response = await fetch(`http://localhost:5050/shorts/${id}`);
+      const response = await fetch(`https://server.brzcode.site/shorts/${id}`);
       if (!response.ok) {
         console.error("Failed to fetch");
       }
@@ -26,7 +26,7 @@ const ProductDetail = () => {
     };
 
     const getAllShorts = async () => {
-      const response = await fetch("http://localhost:5050/shorts");
+      const response = await fetch("https://server.brzcode.site/shorts");
       if (!response.ok) {
         console.error("Failed to fetch other shorts");
       }
@@ -72,7 +72,11 @@ const ProductDetail = () => {
       <Helmet>
         <title>Shorts details Page</title>
       </Helmet>
+<<<<<<< HEAD
       <button className={classes.backBtn}>
+=======
+	<button className={classes.backBtn}>
+>>>>>>> 7cb3df84cf967e5f032ed89043610627afc4892b
         <Link to={"/products/productsShorts"}>Back to shorts</Link>
       </button>
 
