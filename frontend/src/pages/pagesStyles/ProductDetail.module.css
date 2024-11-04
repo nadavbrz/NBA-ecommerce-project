@@ -177,7 +177,8 @@
   text-overflow: ellipsis;  
   width: 100%;               
   word-wrap: break-word;     
-  line-height: 1.2;         
+  line-height: 1.2;    
+  font-size: 14px;     
 }
 
 
