@@ -173,11 +173,13 @@
   font-weight: bold;
   color: #007bff;
   text-decoration: none;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
+  overflow: hidden;          
+  text-overflow: ellipsis;  
+  width: 100%;               
+  word-wrap: break-word;     
+  line-height: 1.2;         
 }
+
 
 .otherPlayerPrice {
   color: green;
