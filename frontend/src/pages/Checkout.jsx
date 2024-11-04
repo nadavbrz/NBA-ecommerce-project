@@ -35,29 +35,25 @@ const PaymentForm = () => {
         const { error, paymentIntent } = await stripe.confirmPayment({
             elements,
             confirmParams: {
-                return_url: "http://localhost:5173/userDetails", // Redirect URL after payment
+                return_url: "https://nba-e-commerce-project.brzcode.site/userDetails", 
             },
         });
     
         if (error) {
             console.log(error.message);
         } else if (paymentIntent.status === 'succeeded') {
-            // Only create the order after the payment is successful
     
-            // Construct the order details
             const orderDetails = {
                 products: cartItems.map(item => ({
                     product: item._id,
                     quantity: item.quantity,
                 })),
-                total: paymentIntent.amount / 100, // Convert cents to dollars
-                // Add any other necessary fields here, e.g., user info, shipping address, etc.
+                total: paymentIntent.amount / 100, 
             };
     
             try {
-                const response = await postOrder(orderDetails); // Post the order
+                const response = await postOrder(orderDetails); 
                 console.log("Order created successfully:", response);
-                // Optionally navigate or show success message
             } catch (error) {
                 console.error("Error creating order:", error);
             }
