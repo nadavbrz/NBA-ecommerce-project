@@ -1,0 +1,81 @@
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.paymentElement {
+    margin-bottom: 20px;
+}
+
+.paymentDetails {
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:disabled {
+    background-color: #ccc; 
+    cursor: not-allowed;
+}
+
+.button:hover:not(:disabled) {
+    background-color: #45a049; 
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 15px; 
+    }
+
+    .title {
+        font-size: 20px; 
+    }
+
+    .button {
+        font-size: 14px; 
+        padding: 10px; 
+    }
+
+    .paymentDetails {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .title {
+        font-size: 18px; 
+    }
+
+    .button {
+        padding: 8px; 
+    }
+}
