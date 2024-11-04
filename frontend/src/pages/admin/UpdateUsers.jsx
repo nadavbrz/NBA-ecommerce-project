@@ -74,14 +74,14 @@ const UpdateUsers = () => {
     }
   };
 
-  const updateInput = (user) => {
-    setFormData({
-      username: user.username || "",
-      age: user.age || "",
-      email: user.email || "",
-      password: user.password || "",
-    });
-  };
+  // const updateInput = (user) => {
+  //   setFormData({
+  //     username: user.username || "",
+  //     age: user.age || "",
+  //     email: user.email || "",
+  //     password: user.password || "",
+  //   });
+  // };
 
   return (
     <>
@@ -137,7 +137,7 @@ const UpdateUsers = () => {
               <li
                 className={classes.box}
                 key={user._id}
-                onClick={() => updateInput(user)}
+                // onClick={() => updateInput(user)}
               >
                 <p>Username: {user.username}</p>
                 <p>Age: {user.age}</p>

@@ -5,6 +5,8 @@ import { FaCartShopping } from "react-icons/fa6";
 import { RiAccountCircleFill } from "react-icons/ri";
 import { ImExit } from "react-icons/im";
 import CartLogo from "./CartLogo";
+import React from 'react';
+
 
 
 const MainNavigation = () => {

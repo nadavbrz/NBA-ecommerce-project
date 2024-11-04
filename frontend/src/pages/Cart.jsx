@@ -49,9 +49,16 @@ const Cart = () => {
 
         const orderTotal = discountApplied ? Math.round(discountedTotal * 100) : Math.round(totalAmount * 100);
 
+<<<<<<< HEAD
+
+        try {
+            // Create payment intent
+            const paymentResponse = await fetch("http://localhost:5050/api/create-payment-intent", { // Directly using the backend URL
+=======
         try {
             // Create payment intent
             const paymentResponse = await fetch("https://server.brzcode.site/api/create-payment-intent", { // Directly using the backend URL
+>>>>>>> 7cb3df84cf967e5f032ed89043610627afc4892b
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ amount: orderTotal * 100 }), // amount in cents

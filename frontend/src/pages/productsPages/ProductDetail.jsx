@@ -69,7 +69,11 @@ const ProductDetail = () => {
 
   return (
     <>
+<<<<<<< HEAD
+     <Helmet>
+=======
 	<Helmet>
+>>>>>>> 7cb3df84cf967e5f032ed89043610627afc4892b
         <title>Current jerseys details Page</title>
       </Helmet>
         <button className={classes.backBtn}>
@@ -107,8 +111,8 @@ const ProductDetail = () => {
               Add to cart
             </button>
             {alert.length > 0}
-              <p className={classes.alert}>{alert}</p>
-            
+            <p className={classes.alert}>{alert}</p>
+
             <div className={classes.sizeBox}>
               <h3>Size: {selectedSize}</h3>
               <div className={classes.sizes}>

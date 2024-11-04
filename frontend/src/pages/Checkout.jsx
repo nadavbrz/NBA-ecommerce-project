@@ -9,7 +9,11 @@ const stripePromise = loadStripe("pk_test_51QDj6pEH32I6fwFycHRdE4GiKAdv6uDcNlOjH
 const CheckoutPage = () => {
     const location = useLocation();
     const clientSecret = location.state?.clientSecret;
+<<<<<<< HEAD
+    const cartItems = location.state?.cartItems;
+=======
 	const cartItems = location.state?.cartItems;
+>>>>>>> 7cb3df84cf967e5f032ed89043610627afc4892b
 
     return (
         <div>
@@ -35,7 +39,11 @@ const PaymentForm = () => {
         const { error, paymentIntent } = await stripe.confirmPayment({
             elements,
             confirmParams: {
+<<<<<<< HEAD
+                return_url: "http://localhost:5173/userDetails", // Redirect URL after payment
+=======
                 return_url: "https://nba-e-commerce-project.brzcode.site/userDetails", // Redirect URL after payment
+>>>>>>> 7cb3df84cf967e5f032ed89043610627afc4892b
             },
         });
     
