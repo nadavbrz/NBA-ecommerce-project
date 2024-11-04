@@ -36,7 +36,6 @@ const ProductDetail = () => {
 
     getJersey();
     getAllJerseys();
-    window.scrollTo(0, 0);
   }, [id]);
 
   const [description, setDescription] = useState(false);
