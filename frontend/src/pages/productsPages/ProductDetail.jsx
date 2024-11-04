@@ -69,11 +69,7 @@ const ProductDetail = () => {
 
   return (
     <>
-<<<<<<< HEAD
      <Helmet>
-=======
-	<Helmet>
->>>>>>> 7cb3df84cf967e5f032ed89043610627afc4892b
         <title>Current jerseys details Page</title>
       </Helmet>
         <button className={classes.backBtn}>
