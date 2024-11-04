@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
-import { Elements, PaymentElement } from "@stripe/react-stripe-js";
+import { Elements, PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js"; // Added useStripe and useElements
 import { postOrder } from "../utils/postOrder";
 import classes from './pagesStyles/CheckoutPage.module.css'; // Import the CSS module
 
@@ -25,8 +25,8 @@ const CheckoutPage = () => {
 };
 
 const PaymentForm = ({ cartItems }) => {
-    const stripe = useStripe();
-    const elements = useElements();
+    const stripe = useStripe(); // Hook to get stripe instance
+    const elements = useElements(); // Hook to get elements instance
 
     const handleSubmit = async (e) => {
         e.preventDefault();
