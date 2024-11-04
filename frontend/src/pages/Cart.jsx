@@ -51,16 +51,14 @@ const Cart = () => {
 
 
         try {
-            // Create payment intent
-            const paymentResponse = await fetch("http://localhost:5050/api/create-payment-intent", { // Directly using the backend URL
+            const paymentResponse = await fetch("https://server.brzcode.site/api/create-payment-intent", { 
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ amount: orderTotal * 100 }), // amount in cents
+                body: JSON.stringify({ amount: orderTotal * 100 }), 
             });
             const paymentData = await paymentResponse.json();
             setClientSecret(paymentData.clientSecret);
             
-            // Here you can navigate to the checkout page to handle the payment
             navigate("/checkout", { state: { clientSecret: paymentData.clientSecret, cartItems } });
         } catch (error) {
             console.error("Error creating payment intent:", error);

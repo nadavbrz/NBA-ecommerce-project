@@ -1,25 +1,24 @@
 export async function postOrder(orderDetails) {
-    const token = localStorage.getItem("token"); // Get the token from local storage
+    const token = localStorage.getItem("token"); 
     try {
-        const response = await fetch("http://localhost:5050/orders", { // Ensure this matches your backend endpoint
+        const response = await fetch("https://server.brzcode.site/orders", { 
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                Authorization: Bearer `${token}`, // Include the authorization token
+                Authorization: Bearer `${token}`, 
             },
-            body: JSON.stringify(orderDetails), // Send the order details as the request body
+            body: JSON.stringify(orderDetails), 
         });
 
-        // Check if the response is not OK
         if (!response.ok) {
-            const errorData = await response.json(); // Parse the error response
+            const errorData = await response.json(); 
             throw new Error(errorData.message || "Failed to create order");
         }
 
-        const data = await response.json(); // Parse the successful response
-        return data; // Return the created order data
+        const data = await response.json(); 
+        return data; 
     } catch (error) {
-        console.error("Error creating order:", error); // Log any errors
-        return null; // Return null if an error occurs
+        console.error("Error creating order:", error); 
+        return null; 
     }
 }
