@@ -40,7 +40,7 @@ const Home = () => {
       </Helmet>
       <div className={classes.homeContainer}>
         <header className={classes.header}>
-          <h3>Hello, {user ? user.username : "Guest"}!</h3>
+          <h3>Hello!, {user ? user.username : "Guest"}!</h3>
           <img className={classes.logo} src="/images/NBA.png" alt="NBA logo" />
           <h1 className={classes.ballerShop}>Baller Shop</h1>
           {/* <h1>{test}</h1> */}
